@@ -414,7 +414,13 @@ class Screener(object):
         """ Private function used to return table headers. """
         headers = []
 
-        header_elements = self._page_content.cssselect('tr[align="center" valign="middle"]')[0].xpath("th")
+        print("Getting Table Headers...")
+        header_elements = self._page_content.cssselect('tr[align="center" valign="middle"]')
+        print("header_elements 1: ", header_elements)
+        header_elements = header_elements[0]
+        print("header_elements 2: ", header_elements)
+        header_elements = header_elements.xpath("th")
+        print("header_elements 3: ", header_elements)
         
         for header_element in header_elements:
             # Use normalize-space to extract text content while ignoring internal elements
