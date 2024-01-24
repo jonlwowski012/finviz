@@ -415,7 +415,7 @@ class Screener(object):
         headers = []
 
         print("Getting Table Headers...")
-        header_elements = self._page_content.cssselect('tr[align="center" valign="middle"]')
+        header_elements = self._page_content.cssselect('tr[align="center"]')
         print("header_elements 1: ", header_elements)
         header_elements = header_elements[0]
         print("header_elements 2: ", header_elements)
